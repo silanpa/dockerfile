@@ -19,9 +19,11 @@ RUN wget https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz -P /home/int
 RUN tar zxvf /home/intellij/download/ideaIU-2016.2.5.tar.gz
 
 WORKDIR $HOME/download/ideaIU-2016.2.5/bin
-USER intellij
 
 ADD ./idea /usr/sbin/intellij
+RUN chmod +x /usr/sbin/intellij
+
+USER intellij
 
 CMD /usr/sbin/intellij
 
