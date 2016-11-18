@@ -1,4 +1,5 @@
-#	docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --device /dev/snd:/dev/snd -v /etc/localtime:/etc/localtime:ro silanpa/lastfm
+# docker run -d -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --device /dev/snd:/dev/snd --name lastfm silanpa/lastfm
+
 
 FROM debian:sid
 MAINTAINER Victor Silanpa<silanpadev@gmail.com>
