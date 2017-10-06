@@ -14,9 +14,7 @@ RUN useradd --create-home --home-dir $HOME intellij \
 	&& gpasswd -a intellij root \
 	&& chown -R intellij:intellij $HOME
 
-RUN wget https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz -P /home/intellij/download
-
-RUN tar zxvf /home/intellij/download/ideaIU-2016.2.5.tar.gz
+RUN wget https://download.jetbrains.com/idea/ideaIU-2016.2.5.tar.gz -P /home/intellij/download; tar zxvf /home/intellij/download/ideaIU-2016.2.5.tar.gz
 
 WORKDIR $HOME/download/ideaIU-2016.2.5/bin
 
